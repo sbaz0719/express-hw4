@@ -1,0 +1,18 @@
+<%- include('partials/header', { navigation }) %>
+
+<h2>NASA Picture of the Day</h2>
+<p>Date: <%= date %></p>
+
+<% if (picture) { %>
+  <h3><%= picture.title %></h3>
+  <% if (picture.media_type === 'image') { %>
+    <img class="nasa-picture" src="<%= picture.url %>" alt="NASA Picture of the Day">
+  <% } else { %>
+    <iframe class="nasa-video" src="<%= picture.url %>"></iframe>
+  <% } %>
+  <p><%= picture.explanation %></p>
+<% } else { %>
+  <p>The NASA API could not be reached.</p>
+<% } %>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,17 @@
+<%- include('partials/header', { navigation }) %>
+
+<h2>Information from a Node Package</h2>
+<p>This page uses the <strong>@faker-js/faker</strong> Node package.</p>
+<p>The package creates the example information below:</p>
+
+<table>
+  <tr><th>Name</th><td><%= person.name %></td></tr>
+  <tr><th>Email</th><td><%= person.email %></td></tr>
+  <tr><th>City</th><td><%= person.city %></td></tr>
+  <tr><th>Favorite color</th><td><%= person.favoriteColor %></td></tr>
+  <tr><th>Message</th><td><%= person.message %></td></tr>
+</table>
+
+<p>Refresh this page to see different package-generated information.</p>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,12 @@
+<%- include('partials/header', { navigation }) %>
+
+<h2><%= planet.name %></h2>
+<table>
+  <tr><th>Order from the Sun</th><td><%= planet.order %></td></tr>
+  <tr><th>Type</th><td><%= planet.type %></td></tr>
+  <tr><th>Number of moons</th><td><%= planet.moons %></td></tr>
+</table>
+
+<p><a href="/planets">Back to planets</a></p>
+
+<%- include('partials/footer') %>

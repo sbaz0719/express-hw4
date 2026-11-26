@@ -1,0 +1,13 @@
+<%- include('partials/header', { navigation }) %>
+
+<h2>Planets</h2>
+<ul>
+  <% planets.forEach(planet => { %>
+    <li>
+      <a href="/planet/<%= planet.name.toLowerCase() %>"><%= planet.name %></a>
+      - <%= planet.type %>
+    </li>
+  <% }) %>
+</ul>
+
+<%- include('partials/footer') %>
